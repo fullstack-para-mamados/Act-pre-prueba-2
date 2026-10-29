@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — GotyShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="encabezado">
+  <nav class="barra-nav contenedor" aria-label="Navegación principal">
+    <a href="index.html" class="marca">GotyShop</a>
+    <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html" aria-current="page">Productos</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+      <li><span class="carrito-info">🛒 <span id="contador-carrito">0</span></span></li>
+      <li><span class="carrito-info">⭐ <span id="contador-lista">0</span></span></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="seccion" id="productos">
+  <div class="contenedor">
+    <div class="intro-seccion">
+      <span class="juegos_gotys">CATÁLOGO</span>
+      <h1>Juegos destacados</h1>
+      <p>Busca un juego, agrégalo al carrito o guárdalo en tu lista.</p>
+    </div>
+
+    <div class="filtros">
+      <label for="buscador">Buscar juego</label>
+      <input id="buscador" type="search" placeholder="Ej: Monster Hunter">
+    </div>
+
+    <p id="estado-productos" class="estado" aria-live="polite">Cargando productos...</p>
+    <div id="contenedor-productos" class="grilla-productos"></div>
+  </div>
+</section>
+
+<section class="seccion seccion--marcada">
+  <div class="contenedor">
+    <div class="intro-seccion">
+      <h2>Escribir reseña</h2>
+      <p>La reseña se habilita cuando escribes al menos 10 caracteres.</p>
+    </div>
+    <form id="form-reseña" class="panel-formulario" novalidate>
+      <div class="campo">
+        <label for="rating">Calificación:</label>
+        <select id="rating">
+          <option value="5">★★★★★ — 5 estrellas</option>
+          <option value="4">★★★★☆ — 4 estrellas</option>
+          <option value="3">★★★☆☆ — 3 estrellas</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="comentario">Reseña:</label>
+        <textarea id="comentario" maxlength="500" placeholder="Escribe al menos 10 caracteres..."></textarea>
+        <span id="error-reseña" class="mensaje-error"></span>
+      </div>
+      <button id="btn-reseña" class="boton" type="submit" disabled>Publicar reseña</button>
+      <div id="mensaje-reseña" class="mensaje-formulario" role="alert"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie-final">
+    <span>© 2026 GotyShop. Todos los derechos reservados.</span>
+    <span>Evaluación 1 - DSY1104 Desarrollo Fullstack II</span>
+  </div>
+</footer>
+<script src="js/productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - GotyShop</title>
+  <meta name="description" content=".">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <nav class="barra-nav contenedor" aria-label="Navegación principal">
+    <a href="index.html" class="marca">GotyShop</a>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <section class="seccion">
+        <div class = "contenedor">
+            <div class="Intro-seccion" style="margin-inline:auto; text-align:center;">
+                <h1>Formulario de contacto</h1>
+            </div>
+                <form id="form-contacto" class="panel-formulario" novalidate>
+                    <div class="campo">    
+                        <label for="nombre">Nombre:</label>
+                        <input
+                            id="nombre"
+                            name="nombre"
+                            type="text"
+                            required placeholder="Ingrese su nombre"
+                            aria-describedby="error-nombre"
+                            maxlength="100"
+                        > 
+                        <span class="mensaje-error" id="error-nombre"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="email"> Correo electronico:</label>
+                        <input
+                            
+                            id="email"
+                            name="email"
+                            type="email"
+                            required placeholder="Ingrese su email"
+                            maxlength="100"
+                            aria-describedby="error-correo"
+                                               
+     
+                        >
+                        <span class="mensaje-error" id="error-correo"></span>
+                        <small class="ayuda"> Dominios permitidos: @hotmail.com, @gmail.com
+
+                    </div>
+                    <div class="campo">
+                        <label for = "mensaje"> Mensaje: </label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            required placeholder="Escriba su mensaje"
+                            maxlength= "500"
+                        ></textarea>
+                        <span class="mensaje-error" id="error-mensaje"></span>
+                    </div>
+                    <div id="mensaje-formulario" class="mensaje-formulario" role="alert"></div>
+                    <button class="boton" type="submit">Enviar </button>
+                </form>
+    </section>
+</main>
+<footer class="pie">
+    <div class="contenedor pie-final">
+        <span>© 2026 GotyShop. Todos los derechos reservados.</span>
+        <span>Evaluacion 1 - DSY1104 Desarrollo Fullstack II</span>
+    </div> 
+</footer>
+
+<script src="js/validacion.js"></script>
+</body>
+</html>

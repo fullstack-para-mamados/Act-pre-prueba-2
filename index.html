@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GotyShop — Juegos GOTY</title>
+  <meta name="description" content="Tienda de juegos ganadores y destacados.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="encabezado">
+  <nav class="barra-nav contenedor" aria-label="Navegación principal">
+    <a href="index.html" class="marca">GotyShop</a>
+    <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" aria-current="page">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+      <li><span class="carrito-info">🛒 <span id="contador-carrito">0</span></span></li>
+      <li><span class="carrito-info">⭐ <span id="contador-lista">0</span></span></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="contenedor hero-grid">
+      <div>
+        <span class="juegos_gotys">JUEGOS GOTY</span>
+        <h1>Los juegos que dejaron huella.</h1>
+        <p>Descubre juegos destacados, agrégalos al carrito o guárdalos en tu lista para verlos después.</p>
+        <a class="boton boton--ocre" href="productos.html">Ver catálogo</a>
+      </div>
+      <figure class="hero-imagen">
+        <img src="img/Gotymain.jpg" alt="Juegos ganadores de los Game Awards">
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion seccion--marcada">
+    <div class="contenedor">
+      <div class="intro-seccion">
+        <h2>¿Qué hay de nuevo?</h2>
+        <p>Ahora GotyShop tiene tarjetas dinámicas, lista de deseos y reseñas.</p>
+      </div>
+      <div class="beneficios">
+        <article><strong>🛒 Carrito persistente</strong><p>El contador se mantiene aunque recargues la página.</p></article>
+        <article><strong>⭐ Mi lista</strong><p>Guarda tus juegos favoritos con un clic.</p></article>
+        <article><strong>💬 Reseñas</strong><p>Escribe y publica una opinión desde la página.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie-final">
+    <span>© 2026 GotyShop. Todos los derechos reservados.</span>
+    <span>Evaluación 1 - DSY1104 Desarrollo Fullstack II</span>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
