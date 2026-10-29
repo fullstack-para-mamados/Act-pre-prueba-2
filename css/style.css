@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --verde-bosque: #1f3a2e;
+  --verde-profundo: #142720;
+  --ocre: #c98a3b;
+  --ocre-claro: #e3ad64;
+  --crema: #f2ede1;
+  --tinta: #22201b;
+  --linea: rgba(34, 32, 27, 0.15);
+  --error: #b3402a;
+  --exito: #2f6b4f;
+
+  --fuente-titulo: 'Fraunces', Georgia, serif;
+  --fuente-texto: 'Work Sans', system-ui, sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  color: var(--tinta);
+  background: var(--crema);
+  line-height: 1.55;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  margin: 0 0 0.5em 0;
+  font-weight: 1200;
+  line-height: 1.15;
+}
+
+p { max-width: 62ch; }
+
+.contenedor {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+
+.encabezado {
+  background: var(--verde-profundo);
+  color: var(--crema);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.barra-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+
+.boton-menu {
+  display: none;
+  background: none;
+  border: 1px solid var(--crema);
+  color: var(--crema);
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.hero {
+  background: var(--verde-bosque);
+  color: var(--crema);
+  padding: 4.5rem 0 3.5rem;
+}
+
+
+.seccion {
+  padding: 4rem 0;
+}
+
+.seccion--marcada {
+  background: #fffaeb;
+}
+
+.intro-seccion {
+  max-width: 58ch;
+  margin-bottom: 2.5rem;
+}
+
+
+
+
+.grilla-productos {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--linea);
+  border-left: 1px solid var(--linea);
+}
+
+.producto {
+  border-right: 1px solid var(--linea);
+  border-bottom: 1px solid var(--linea);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.producto img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.producto h3 { font-size: 1.15rem; }
+
+.producto .precio {
+  font-family: var(--fuente-titulo);
+  color: var(--verde-bosque);
+  font-size: 1.05rem;
+  margin-top: auto;
+}
+
+.boton {
+  align-self: flex-start;
+  background: var(--verde-bosque);
+  color: var(--crema);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--fuente-texto);
+  font-size: 0.92rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.boton:hover { background: var(--verde-profundo); }
+
+.boton--ocre {
+  background: var(--ocre);
+  color: var(--verde-profundo);
+}
+
+.boton--ocre:hover { background: var(--ocre-claro); }
+
+/* ---------- Video ---------- */
+.envoltorio-video {
+  position: relative;
+  padding-top: 57.25%;
+  border-radius: 6px;
+  border: 1px solid var(--linea);
+}
+
+.envoltorio-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Formularios ---------- */
+.panel-formulario {
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 2.2rem;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.campo {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.campo input {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #c9c2ae;
+  border-radius: 4px;
+  background: var(--crema);
+}
+
+
+
+
+.mensaje-error {
+  font-size: 0.82rem;
+  color: var(--error);
+  min-height: 1.1em;
+}
+
+
+
+
+.pie {
+  background: var(--verde-profundo);
+  color: rgba(242, 237, 225, 0.85);
+  padding: 3rem 0 2rem;
+  margin-top: 2rem;
+}
+
+.pie-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(242, 237, 225, 0.15);
+}
+
+
+
+.pie-final {
+  padding-top: 1.3rem;
+  font-size: 0.82rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+
+
+/* ---------- Mejoras V.01: componentes y estados ---------- */
+.marca { text-decoration: none; font-family: var(--fuente-titulo); font-size: 1.35rem; font-weight: 700; }
+.juegos_gotys { display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.12em; color:var(--ocre); margin-bottom:.8rem; }
+.hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; }
+.hero h1 { font-size:clamp(2.2rem,5vw,4rem); }
+.hero-imagen { margin:0; }
+.hero-imagen img { width:100%; max-height:420px; object-fit:cover; border-radius:8px; }
+.beneficios { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.beneficios article { background:#fff; border:1px solid var(--linea); padding:1.2rem; border-radius:8px; }
+.beneficios p { margin:.5rem 0 0; font-size:.9rem; }
+.grilla-productos { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; border:0; }
+.producto { position:relative; border:1px solid var(--linea); border-radius:10px; padding:1rem; background:#fff; box-shadow:0 5px 18px rgba(0,0,0,.05); }
+.producto img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:7px; }
+.tag-destacado { position:absolute; top:1.5rem; left:1.5rem; background:var(--ocre); color:var(--verde-profundo); font-size:.7rem; font-weight:700; padding:.3rem .5rem; border-radius:4px; }
+.acciones-producto { display:flex; flex-wrap:wrap; gap:.5rem; }
+.boton-lista { background:transparent; color:var(--verde-bosque); border:1px solid var(--verde-bosque); }
+.boton-lista:hover { background:var(--crema); }
+.filtros { display:flex; flex-direction:column; max-width:420px; margin-bottom:1.5rem; gap:.35rem; }
+.filtros input, .campo textarea, .campo select { font:inherit; padding:.7rem .8rem; border:1px solid #c9c2ae; border-radius:5px; background:#fff; }
+.campo textarea { min-height:120px; resize:vertical; }
+.estado { min-height:1.5em; margin:1rem 0; }
+.estado--exito { color:var(--exito); font-weight:600; }
+.panel-formulario select { width:100%; }
+.mensaje-formulario { min-height:1.4em; margin-top:.7rem; }
+.mensaje-formulario--visible { padding:.6rem; border-radius:5px; }
+.mensaje-formulario--exito { background:#e7f3eb; color:var(--exito); }
+button:disabled { opacity:.5; cursor:not-allowed; }
+@media (max-width: 850px) {
+  .grilla-productos { grid-template-columns:repeat(2,1fr); }
+  .hero-grid, .beneficios { grid-template-columns:1fr; }
+}
+@media (max-width: 600px) {
+  .boton-menu { display:block; }
+  .menu { display:none; flex-direction:column; width:100%; padding-top:1rem; }
+  .menu.menu--abierto { display:flex; }
+  .barra-nav { flex-wrap:wrap; }
+  .grilla-productos { grid-template-columns:1fr; }
+}
