@@ -16,10 +16,4 @@ Proyecto HTML, CSS y JavaScript para la tienda GotyShop.
 - Menú responsive para pantallas pequeñas.
 - Correcciones de HTML/JS del formulario de contacto.
 
-## Diferencia con el proyecto React de referencia
 
-El otro proyecto usa React, componentes reutilizables, `useState`, `useEffect`, `fetch` y Jest. V.01 mantiene HTML/CSS/JavaScript tradicional, pero incorpora las mismas ideas funcionales con DOM, eventos y `localStorage`, sin convertir el proyecto completo a React.
-
-## Ejecutar
-
-No necesita servidor para las funciones principales. Se puede abrir `index.html` o usar Live Server en VS Code.
